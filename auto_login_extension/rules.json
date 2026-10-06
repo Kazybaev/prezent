@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "x-frame-options", "operation": "remove" },
+        { "header": "content-security-policy", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||aizi-chat.trade.kg/",
+      "resourceTypes": ["sub_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {"type": "modifyHeaders", "responseHeaders": [{"header": "x-frame-options", "operation": "remove"}, {"header": "content-security-policy", "operation": "remove"}]},
+    "condition": {"urlFilter": "||test-tnved.trade.kg/", "resourceTypes": ["sub_frame"]}
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {"type": "modifyHeaders", "responseHeaders": [{"header": "x-frame-options", "operation": "remove"}, {"header": "content-security-policy", "operation": "remove"}]},
+    "condition": {"urlFilter": "||ai.trade.kg/", "resourceTypes": ["sub_frame"]}
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {"type": "modifyHeaders", "responseHeaders": [{"header": "x-frame-options", "operation": "remove"}, {"header": "content-security-policy", "operation": "remove"}]},
+    "condition": {"urlFilter": "||ocr.trade.kg/", "resourceTypes": ["sub_frame"]}
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {"type": "modifyHeaders", "responseHeaders": [{"header": "x-frame-options", "operation": "remove"}, {"header": "content-security-policy", "operation": "remove"}]},
+    "condition": {"urlFilter": "||cost-tovar.trade.kg/", "resourceTypes": ["sub_frame"]}
+  }
+]

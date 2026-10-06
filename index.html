@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>OTG AI Live — интерактивная демонстрация</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg class="sr-only" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M8 21H3v-5m18 0v5h-5"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6m0-6-9 9"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-reload" viewBox="0 0 24 24"><path d="M20 6v5h-5M4 18v-5h5"/><path d="M6.1 9A7 7 0 0 1 18.4 6.6L20 11M4 13l1.6 4.4A7 7 0 0 0 17.9 15"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="13" rx="4"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3m-4 0h8"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6z"/><path d="m9 12 2 2 4-5"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 12h1m3 0h1m3 0h1M8 16h1m3 0h1m3 0h1"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 13h6m-6 4h6"/></symbol>
+</svg>
+
+<div class="app">
+  <div class="ambient"></div><div class="noise"></div>
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">MC</div><div class="brand-copy"><b>Modern Customs</b><span>OTG AI Live · ГТС КР</span></div></div>
+    <div class="top-center"><i class="live-dot"></i><span>Интерактивная демонстрация</span></div>
+    <div class="top-actions">
+      <button class="text-btn" id="overviewBtn"><svg class="icon"><use href="#i-search"/></svg><span>Сервисы</span></button>
+      <button class="icon-btn" id="fullscreenBtn" aria-label="Полноэкранный режим" title="Полный экран (F)"><svg class="icon"><use href="#i-expand"/></svg></button>
+    </div>
+  </header>
+
+  <main class="slides" id="slides">
+    <section class="slide dark event-hero" aria-label="Главная">
+      <div class="slide-inner hero">
+        <div class="hero-copy">
+          <div class="event-logo" role="img" aria-label="Modern Customs — Digitalization, Global Cooperation and Business Partnerships"></div>
+          <div class="eyebrow">Единое окно · ГТС Кыргызской Республики</div>
+          <h1 class="display">ИИ-сервисы: <span class="accent">от документа — к точному решению</span></h1>
+          <p class="lead muted">Пять интеллектуальных сервисов в единой цифровой цепочке: консультация, классификация, контроль, распознавание документов и оценка стоимости.</p>
+          <div class="hero-actions"><button class="primary" data-go="1">Начать демо <svg class="icon"><use href="#i-arrow"/></svg></button><button class="secondary" data-go="4"><svg class="icon"><use href="#i-mic"/></svg>Открыть AIZI</button></div>
+          <div class="hero-proof"><span><b>5</b>рабочих сервисов</span><span><b>1</b>маршрут данных</span><span><b>24/7</b>доступ к решениям</span></div>
+        </div>
+        <div class="hero-visual"><div class="mc-grid" aria-hidden="true"></div><div class="orb" aria-hidden="true"></div><div class="orbit" aria-hidden="true"><i></i></div><div class="hero-stack">
+          <button class="hero-card" data-go="4" aria-label="Открыть демонстрацию AIZI"><div class="hero-icon"><svg class="icon"><use href="#i-mic"/></svg></div><div><b>AIZI</b><small>Голос и диалог</small></div><em>открыть</em></button>
+          <button class="hero-card" data-go="5" aria-label="Открыть демонстрацию TN VED"><div class="hero-icon"><svg class="icon"><use href="#i-search"/></svg></div><div><b>TN VED</b><small>Классификация товара</small></div><em>открыть</em></button>
+          <button class="hero-card" data-go="6" aria-label="Открыть демонстрацию Control"><div class="hero-icon"><svg class="icon"><use href="#i-shield"/></svg></div><div><b>Control</b><small>НКС КР и перечень ЕАЭС</small></div><em>открыть</em></button>
+          <button class="hero-card" data-go="7" aria-label="Открыть демонстрацию OCR"><div class="hero-icon"><svg class="icon"><use href="#i-doc"/></svg></div><div><b>OCR</b><small>Документ превращается в данные</small></div><em>открыть</em></button>
+          <button class="hero-card" data-go="8" aria-label="Открыть демонстрацию Cost Tovar"><div class="hero-icon"><svg class="icon"><use href="#i-calc"/></svg></div><div><b>Cost Tovar</b><small>Оценка и риск-сигналы</small></div><em>открыть</em></button>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="slide overview-slide context-slide" aria-label="Контекст внедрения ИИ">
+      <div class="slide-inner">
+        <div class="slide-head"><div><div class="eyebrow">02 · Контекст</div><h2>ИИ в таможне:<br><span class="green-text">от призыва — к практике</span></h2></div><p class="lead muted">Кыргызстан уже перешёл от пилотов к сервисам, которые используются в ежедневной работе.</p></div>
+        <div class="context-grid"><article><span>ОТГ · Туркестан · май 2026</span><strong>Стратегический приоритет</strong><p>ИИ — инструмент для управления рисками и упрощения пограничных процедур.</p><i>01</i></article><article class="context-stat"><span>ВТамО · опрос 2024</span><strong><b>12</b> из 116</strong><p>таможенных администраций довели ИИ до полного внедрения.</p><i>02</i></article><article class="context-active"><span>Кыргызстан · октябрь 2026</span><strong>Уже работает</strong><p>Единое окно и ГТС КР используют ИИ-сервисы. Модели размещены на собственном сервере.</p><div class="context-live"><i></i>PRODUCTION</div></article></div>
+      </div>
+    </section>
+
+    <section class="slide route-slide" aria-label="Цифровой маршрут">
+      <div class="slide-inner"><div class="slide-head"><div><div class="eyebrow">03 · Маршрут данных</div><h2>От документа — к <span class="green-text">проверяемому решению</span></h2></div><p class="lead muted">Данные один раз извлекаются из документа, а затем передаются между сервисами.</p></div><div class="route-map"><div class="route-line"></div><article><b>01</b><span class="route-icon"><svg class="icon"><use href="#i-mic"/></svg></span><h3>Вопрос</h3><p>Консультация AIZI на естественном языке</p></article><article><b>02</b><span class="route-icon"><svg class="icon"><use href="#i-search"/></svg></span><h3>Код</h3><p>Подбор классификации ТН ВЭД</p></article><article><b>03</b><span class="route-icon"><svg class="icon"><use href="#i-shield"/></svg></span><h3>Контроль</h3><p>Сверка с НКС КР и перечнем ЕАЭС</p></article><article><b>04</b><span class="route-icon"><svg class="icon"><use href="#i-doc"/></svg></span><h3>OCR</h3><p>25 типов документов превращаются в данные</p></article><article><b>05</b><span class="route-icon"><svg class="icon"><use href="#i-calc"/></svg></span><h3>Стоимость</h3><p>Расчёт сделки и риск-сигналов</p></article></div></div>
+    </section>
+
+    <section class="impact-slide" hidden aria-label="Эффект цифровизации">
+      <div class="slide-inner"><div class="slide-head"><div><div class="eyebrow">04 · Ценность</div><h2>Меньше рутины.<br><span class="blue-text">Больше контроля.</span></h2></div><p class="lead muted">Система не заменяет инспектора — она даёт ему больше времени на решение.</p></div><div class="impact-grid"><article class="impact-main"><span>Единая точка работы</span><strong>4 → 1</strong><p>Консультация, классификация, контроль и стоимость в одном маршруте.</p><div class="pulse-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article><article><span>Скорость</span><b>Секунды</b><p>вместо ручного поиска по разным источникам</p></article><article><span>Прозрачность</span><b>100%</b><p>видимое обоснование и источники результата</p></article><article class="impact-wide"><span>Принцип</span><b>AI recommends · Human decides</b><p>ИИ готовит рекомендацию. Решение и ответственность остаются у человека.</p></article></div></div>
+    </section>
+
+    <section class="slide chain-lab-slide" aria-label="Интерактивная цепочка товара">
+      <div class="slide-inner chain-lab"><div class="chain-head"><div><div class="eyebrow">04 · Интерактивный маршрут</div><h2>Выберите товар — <span class="green-text">система соберёт маршрут</span></h2></div><p class="lead muted">Один пример проходит через все пять сервисов. Выберите карточку и откройте любой этап.</p></div><div class="product-picker"><button class="active" data-chain-product="filter"><b>Система фильтрации</b><span>Промышленное оборудование</span></button><button data-chain-product="laptop"><b>Ноутбук 16 ГБ</b><span>Вычислительная техника</span></button><button data-chain-product="pump"><b>Центробежный насос</b><span>Промышленный насос</span></button></div><div class="chain-workspace"><aside><span>Цифровой паспорт товара</span><h3 id="chainName">Оборудование для проточной фильтрации</h3><dl><div><dt>Код ТН ВЭД</dt><dd id="chainCode">8537 20 980 0</dd></div><div><dt>Количество</dt><dd id="chainQty">1 комплект</dd></div><div><dt>Стоимость</dt><dd id="chainCost">169 517 EUR</dd></div><div><dt>Страна</dt><dd id="chainCountry">Германия</dd></div></dl><button class="primary" data-go="4">Запустить маршрут <svg class="icon"><use href="#i-arrow"/></svg></button></aside><div class="chain-stages"><button data-go="4"><b>01</b><span>AIZI<small>Требования к ввозу</small></span><em>готово</em></button><button data-go="5"><b>02</b><span>TN VED<small id="chainTnved">8537 20 980 0</small></span><em>92%</em></button><button data-go="6"><b>03</b><span>Control<small id="chainControl">Требуется согласование</small></span><em>4 ведомства</em></button><button data-go="7"><b>04</b><span>OCR<small>Инвойс распознан</small></span><em>59 позиций</em></button><button data-go="8"><b>05</b><span>Cost Tovar<small id="chainValue">169 517 EUR</small></span><em>проверено</em></button></div></div></div>
+    </section>
+
+    <section class="slide dark closing-slide" id="finalSlide" aria-label="Итог">
+      <div class="slide-inner final"><div><div class="eyebrow">Единая цифровая цепочка</div><h2>Быстрее. Точнее. <span style="color:#8de3c8">Проверяемо.</span></h2><p class="lead muted">ИИ ускоряет поиск, классификацию, сверку и расчёт. Финальное решение остаётся за специалистом.</p><div class="hero-actions"><button class="primary" data-go="1">Повторить демо <svg class="icon"><use href="#i-reload"/></svg></button></div></div><div class="result-list">
+        <div class="result"><div class="result-icon"><svg class="icon"><use href="#i-mic"/></svg></div><div><b>Диалог вместо поиска</b><span>AIZI объясняет требования естественным языком.</span></div></div>
+        <div class="result"><div class="result-icon"><svg class="icon"><use href="#i-search"/></svg></div><div><b>От описания к коду</b><span>Классификация с обоснованием и альтернативами.</span></div></div>
+        <div class="result"><div class="result-icon"><svg class="icon"><use href="#i-shield"/></svg></div><div><b>Контроль и стоимость</b><span>Проверка рисков по правилам и данным.</span></div></div>
+      </div></div>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Навигация по слайдам"><button class="nav-btn" id="prevBtn" aria-label="Предыдущий слайд"><svg class="icon"><use href="#i-back"/></svg></button><div class="progress" id="progress"></div><span class="counter" id="counter">01 / 10</span><button class="nav-btn" id="nextBtn" aria-label="Следующий слайд"><svg class="icon"><use href="#i-arrow"/></svg></button></nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
